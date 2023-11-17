@@ -74,3 +74,18 @@ a:visited {
 	right:        200px;
 	width:        280px;
 }
+.ad {
+	position:        absolute;
+	top:                150px;
+	left:               100px;
+	width:              600px;
+	height:              80px;
+	background-color: #ccbb00;
+}
+.sidebar {
+	z-index: 100;
+}
+
+.ad {
+	z-index:  1;
+}
