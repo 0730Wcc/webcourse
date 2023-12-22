@@ -12,16 +12,19 @@ ul {
   width: 100%;
 }
 .container header {
+  position: relative;
   width: 100%;
   background-color: #000000;
+  border-bottom: 1px solid #ccc;
 }
 .container header .header_top {
   width: 90%;
   margin: 0 auto;
-  height: 55px;
+  height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 .container header .header_top .logo a {
   display: flex;
@@ -34,6 +37,11 @@ ul {
 .container header .header_top .logo a span {
   padding-left: 10px;
   color: #fff;
+  display: inline-block;
+    padding-left: .75rem;
+    padding-top: .3125rem;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 1rem;
 }
 .container header .header_top .search ul {
   display: flex;
@@ -67,6 +75,68 @@ ul {
 .container header .header_top .search ul li:last-child a::before {
   background-image: url('../icon/menu.png');
 }
+.container header .header_top .search ul li:last-child:hover {
+  background-color: #333333;
+}
+.container header .header_top .search ul li:last-child:hover .subnav {
+  opacity: 1;
+  height: 300px;
+}
+.container header .header_top .search ul li .subnav {
+  opacity: 0;
+  position: absolute;
+  top: 56px;
+  z-index: 10;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  height: 0px;
+  transition: all 0.8s;
+  padding: 30px 0;
+}
+.container header .header_top .search ul li .subnav .subnav_content {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.container header .header_top .search ul li .subnav .subnav_content dl dt a {
+  font-weight: 600;
+  padding-left: 0;
+}
+.container header .header_top .search ul li .subnav .subnav_content dl dt a::before {
+  background-image: none;
+}
+.container header .header_top .search ul li .subnav .subnav_content dl dt a:hover {
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+.container header .header_top .search ul li .subnav .subnav_content dl dd {
+  height: 32px;
+  line-height: 32px;
+}
+.container header .header_top .search ul li .subnav .subnav_content dl dd a {
+  padding-left: 0;
+  font-weight: 600;
+}
+.container header .header_top .search ul li .subnav .subnav_content dl dd a::before {
+  background-image: none;
+}
+.container header .header_top .search ul li .subnav .subnav_content dl dd a:hover {
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+.container header .header_top .search ul li .subnav .subnav_content .subnav_img:hover p a {
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+.container header .header_top .search ul li .subnav .subnav_content .subnav_img p a {
+  font-weight: 600;
+  padding-left: 0;
+}
+.container header .header_top .search ul li .subnav .subnav_content .subnav_img p a::before {
+  background-image: none;
+}
 .container main .banner {
   position: relative;
   width: 100%;
@@ -74,6 +144,7 @@ ul {
 .container main .banner img {
   width: 100%;
   vertical-align: bottom;
+  height: 400px;
 }
 .container main .banner .banner_text {
   width: 100%;
@@ -94,6 +165,14 @@ ul {
   font-weight: 600;
   font-size: 24px;
   color: #fff;
+  font-size: 1.875rem;
+    margin-right: 1.25rem;
+    border-bottom: none;
+    color: #fff;
+    font-family: "Arial",sans-serif;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 27px;
 }
 .container main .banner .banner_text p span {
   padding-left: 24px;
@@ -132,9 +211,10 @@ ul {
   display: block;
   color: #fff;
   height: 100%;
-  font-size: 12px;
+  font-size: 13px;
   padding: 0 20px;
   font-weight: 600;
+  font-family: Arial,sans-serif;
 }
 .container main nav .nav .nav_left ul li a::after {
   content: '';
@@ -266,7 +346,9 @@ ul {
 }
 .container main .park .park_title h3 {
   padding: 20px 0;
-  font-size: 24px;
+  font-size: 40px;
+  font-family: "Times New Roman",Times,serif;
+  font-weight: lighter;
 }
 .container main .park .park_title p {
   color: #212529;
@@ -304,7 +386,7 @@ ul {
 }
 .container main .park .park_list .park_item a p {
   color: #444;
-  font-size: 12px;
+  font-size: 15px;
 }
 .container main .park .park_list .park_item a:hover .park_item_title {
   color: #4b5e26;
@@ -346,7 +428,7 @@ ul {
 }
 .container main .park .park2_list .park2_item a p {
   color: #444;
-  font-size: 12px;
+  font-size: 15px;
 }
 .container main .park .park2_list .park2_item a:hover .park2_item_title {
   color: #4b5e26;
@@ -372,7 +454,7 @@ ul {
 }
 .container main .park .helpful {
   margin: 20px auto;
-  width: 50%;
+  width: 35%;
   border: 1px solid #ccc;
   padding: 18px 18px 0 18px;
 }
@@ -384,6 +466,7 @@ ul {
   border-radius: 6px;
   padding: 10px 40px;
   margin: 10px 0;
+  cursor: pointer;
 }
 .container main .park .helpful .help_item:first-of-type {
   margin-top: 40px;
@@ -405,6 +488,7 @@ ul {
   width: 100%;
   padding: 6px 18px;
   margin-left: -18px;
+  margin-bottom: 0px;
   font-size: 12px;
   color: #1b1b1b;
 }
@@ -426,6 +510,7 @@ ul {
   overflow: hidden;
   width: 100%;
   height: 320px;
+
 }
 .container main .current .current_item a::after {
   content: '';
@@ -608,6 +693,12 @@ ul {
 }
 .container footer .download .download_left h3 {
   color: #fff;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    line-height: 1.25;
+    margin-bottom: 1rem;
 }
 .container footer .download .download_left .app {
   width: 70%;
@@ -623,7 +714,7 @@ ul {
   margin-left: 20px;
 }
 .container footer .download .download_right img {
-  width: 70%;
+  width: 55%;
 }
 .container footer .footer_nav {
   width: 90%;
@@ -633,6 +724,7 @@ ul {
 }
 .container footer .footer_nav .footer_left {
   width: 60%;
+  font-family:var(--bs-body-font-family);
 }
 .container footer .footer_nav .footer_left .footer_menu {
   width: 100%;
@@ -648,7 +740,7 @@ ul {
 .container footer .footer_nav .footer_left .footer_menu ul li a {
   position: relative;
   color: #fff;
-  font-size: 12px;
+  font-size: .6875rem;
 }
 .container footer .footer_nav .footer_left .footer_menu ul li a::after {
   content: '';
@@ -674,7 +766,7 @@ ul {
 .container footer .footer_nav .footer_left .footer_link ul li a {
   position: relative;
   padding-left: 20px;
-  font-size: 12px;
+  font-size: .6875rem;
   color: #fff;
 }
 .container footer .footer_nav .footer_left .footer_link ul li a::before {
